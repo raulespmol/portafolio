@@ -1,17 +1,19 @@
+import { ProjectCard } from "../components"
 import { projects } from "../constants"
 
 const Projects = () => {
   return (
-    <div>
-      {projects.map(p => (
-        <div>
-          <h3 className="text-xl text-primary">
-            {p.title}
-          </h3>
-          <p>{p.desc}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <h2 className="text-5xl text-center my-5 font-ubuntu font-extrabold">Proyectos</h2>
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4 pt-5">
+        {projects.map(project => (
+          <ProjectCard 
+            key={project.title}
+            {...project}
+          />
+        ))}
+      </div>
+    </>
   )
 }
 

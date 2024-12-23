@@ -30,8 +30,10 @@ const About = () => {
           </div>
           <div>
             <Button 
-              label={"Contacto"}
-            />
+              
+            >
+              Descargar CV
+            </Button>             
           </div>
         </div>
       </div>

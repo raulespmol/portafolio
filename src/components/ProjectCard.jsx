@@ -1,4 +1,4 @@
-const ProjectCard = ({title, desc, img, stack}) => {
+const ProjectCard = ({title, desc, img, stack, url}) => {
   return (
     <div className="bg-slate-100 rounded-md shadow-sm p-3">
       <h4 className="text-2xl text-center font-semibold mb-3">{title}</h4>
@@ -10,13 +10,15 @@ const ProjectCard = ({title, desc, img, stack}) => {
         />
       </div>
       <p className="text-gray-500 mb-5">{desc}</p>
-      {<ul className="list-disc list-inside">
+      <div className="flex items-center gap-5">
         {stack.map(tech => (
-          <li key={tech}>
-            {tech}
-          </li>
+          <div className="flex items-center flex-col justify-between gap-2" key={tech.name}>
+            <img src={tech.icon} alt={tech.name} width={48}/>
+            <p>{tech.name}</p>
+          </div>
         ))}
-      </ul>}
+      </div>
+      <a href={url} className="text-primary font-extrabold" target="_blank">VER PROYECTO</a>
     </div>
   )
 }

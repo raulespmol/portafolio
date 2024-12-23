@@ -1,21 +1,16 @@
-import { Navbar } from "./components"
-import { About, Projects } from "./sections"
-import Footer from "./sections/Footer"
+import { Route, Routes } from "react-router"
+import { Home, Projects } from "./views"
+import { Navbar, Footer } from "./components"
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <section className="max-w-[1280px]">
-        <About />
-      </section>
-
-      <main className="bg-white max-w-[1280px] p-3 rounded-lg border-gray-200 border-2 shadow-lg mb-24">
-        <section>
-          <Projects />
-        </section>
-      </main>
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/proyectos" element={<Projects />} />
+      </Routes>
 
       <Footer />
     </>

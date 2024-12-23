@@ -1,3 +1,4 @@
+import { githubFlat, linkedinFlat } from "../assets/icons"
 import { avatar } from "../assets/images"
 import { Button } from "../components"
 
@@ -28,12 +29,22 @@ const About = () => {
               estética como la experiencia del usuario.
             </p>
           </div>
-          <div>
-            <Button 
-              
-            >
+          <div className="flex items-center gap-2 mt-5">
+            <Button>
               Descargar CV
-            </Button>             
+            </Button>
+            <Button>
+              <img 
+                src={githubFlat}
+                width={28}
+              /> 
+            </Button>
+            <Button>
+              <img 
+                src={linkedinFlat}
+                width={28}
+              /> 
+            </Button>
           </div>
         </div>
       </div>

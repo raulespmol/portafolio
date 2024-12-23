@@ -12,9 +12,9 @@ const ProjectCard = ({title, desc, img, stack, url}) => {
       <p className="text-gray-500 mb-5">{desc}</p>
       <div className="flex items-center gap-5">
         {stack.map(tech => (
-          <div className="flex items-center flex-col justify-between gap-2" key={tech.name}>
+          <div className="flex flex-col items-center justify-between h-max" key={tech.name}>
             <img src={tech.icon} alt={tech.name} width={48}/>
-            <p>{tech.name}</p>
+            <p className="text-gray-400">{tech.name}</p>
           </div>
         ))}
       </div>

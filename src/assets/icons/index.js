@@ -6,8 +6,8 @@ import postgresColor from "./postgres-color.svg";
 import postgresFlat from "./postgres-flat.svg";
 import reactColor from "./react-color.svg";
 import reactFlat from "./react-flat.svg";
-import githubFlat from "./github-flat.svg";
-import linkedinFlat from "./linkedin-flat.svg";
+import GitHub from "./Github";
+import LinkedIn from "./LinkedIn";
 
 export {
   bootstrapColor,
@@ -18,6 +18,6 @@ export {
   postgresFlat,
   reactColor,
   reactFlat,
-  githubFlat,
-  linkedinFlat
+  GitHub,
+  LinkedIn
 }

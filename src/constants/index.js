@@ -8,7 +8,7 @@ export const navLinks = [
   },
   {
     label: "Proyectos",
-    href: "/"
+    href: "/proyectos"
   },
   {
     label: "Contacto",

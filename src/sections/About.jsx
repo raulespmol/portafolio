@@ -1,10 +1,11 @@
-import { githubFlat, linkedinFlat } from "../assets/icons"
+import { Link } from "react-router"
+import { GitHub, LinkedIn } from "../assets/icons"
 import { avatar } from "../assets/images"
 import { Button } from "../components"
 
 const About = () => {
   return (
-    <div className="flex justify-center py-40">
+    <div className="flex justify-center mt-40">
       <div className="flex items-center justify-center w-full gap-10 max-md:flex-col px-10">
         <img 
           src={avatar} 
@@ -33,18 +34,12 @@ const About = () => {
             <Button>
               Descargar CV
             </Button>
-            <Button>
-              <img 
-                src={githubFlat}
-                width={28}
-              /> 
-            </Button>
-            <Button>
-              <img 
-                src={linkedinFlat}
-                width={28}
-              /> 
-            </Button>
+            <a href="https://github.com/raulespmol" target="_blank">
+              <GitHub color="#0097b2" size={50}/>
+            </a>
+            <a href="https://www.linkedin.com/in/raul-espinoza-molina/" target="_blank">
+              <LinkedIn color="#0097b2" size={50}/>
+            </a>
           </div>
         </div>
       </div>

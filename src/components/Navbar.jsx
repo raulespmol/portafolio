@@ -1,3 +1,4 @@
+import { NavLink } from "react-router"
 import { navLinks } from "../constants"
 
 const Navbar = () => {
@@ -10,9 +11,9 @@ const Navbar = () => {
         <ul className="flex gap-40 items-center">
           {navLinks.map(link => (
             <li key={link.label}>
-              <a href={link.href}>
+              <NavLink to={link.href}>
                 {link.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

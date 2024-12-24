@@ -1,3 +1,6 @@
+import { Link } from "react-router"
+import Button from "./Button"
+
 const ProjectCard = ({title, desc, img, stack, url}) => {
   return (
     <div className="bg-slate-100 rounded-md shadow-sm p-3">
@@ -10,15 +13,30 @@ const ProjectCard = ({title, desc, img, stack, url}) => {
         />
       </div>
       <p className="text-gray-500 mb-5">{desc}</p>
-      <div className="flex items-center gap-5">
+      {/* <div className="flex items-center gap-5">
         {stack.map(tech => (
           <div className="flex flex-col items-center justify-between h-max" key={tech.name}>
             <img src={tech.icon} alt={tech.name} width={48}/>
-            <p className="text-gray-400">{tech.name}</p>
           </div>
         ))}
+      </div> */}
+      <div className="flex items-center gap-5">
+        <Link to={"/proyectos"}> {/* Cambiar a la ruta correcta */}
+          <Button>
+            Ver Detalles
+          </Button> 
+        </Link>
+
+        <Link to={url}>
+          <Button>
+            Ir al Sitio
+          </Button> 
+        </Link>
+
+        <Link>
+          
+        </Link>
       </div>
-      <a href={url} className="text-primary font-extrabold" target="_blank">VER PROYECTO</a>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { Button, Image } from "@nextui-org/react"
 
-const ProjectCard = ({title, desc, img, stack, url}) => {
+const ProjectCard = ({id, title, desc, img, stack, url}) => {
   return (
     <div className="bg-slate-100 rounded-lg shadow-sm p-3 flex flex-col justify-between">
       <div>
@@ -30,7 +30,7 @@ const ProjectCard = ({title, desc, img, stack, url}) => {
             </Button> 
           </Link>
 
-          <Link to={"/proyectos"}> {/* Cambiar a la ruta correcta */}
+          <Link to={`/proyectos/${id}`}>
             <Button variant="ghost" className="text-gray-500">
               Ver Detalles
             </Button> 

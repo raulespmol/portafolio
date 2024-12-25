@@ -18,6 +18,7 @@ export const navLinks = [
 
 export const projects = [
   {
+    id: "mercado-libros",
     title: "Mercado Libros",
     desc: "Proyecto final del bootcamp Desarrollo Fullstack de Desafio Latam. Plataforma de compra/venta de libros de segunda mano, con sistema de autenticación, creación de publicaciones y carrito de compras.",
     img: mercadoLibros,
@@ -30,6 +31,7 @@ export const projects = [
     ]
   },
   {
+    id:"proyectos-academicos",
     title: "Proyectos Académicos",
     desc: "Diferentes proyectos que he realizado durante mi formación en Desafío Latam, desde aplicaciones landing pages hasta aplicaciones web.",
     img: placeholder,

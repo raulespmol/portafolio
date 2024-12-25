@@ -3,6 +3,13 @@ import { GitHub, LinkedIn } from "../assets/icons"
 import { avatar } from "../assets/images"
 import { Button } from "@nextui-org/react"
 
+const downloadCV = () => {
+  const link = document.createElement("a")
+  link.href = "/public/CV_Raul_Espinoza_Molina.pdf"
+  link.download = "CV_Raul_Espinoza_Molina"
+  link.click()
+}
+
 const About = () => {
   return (
     <div className="flex justify-center mt-40">
@@ -31,7 +38,7 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center gap-2 mt-5">
-            <Button color="primary" size="lg">
+            <Button color="primary" size="lg" onPress={downloadCV}>
               Descargar CV
             </Button>
             <Button isIconOnly color="primary" variant="light">

@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { GitHub, LinkedIn } from "../assets/icons"
 import { avatar } from "../assets/images"
-import { Button } from "../components"
+import { Button } from "@nextui-org/react"
 
 const About = () => {
   return (
@@ -31,15 +31,15 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center gap-2 mt-5">
-            <Button>
+            <Button color="primary" size="lg">
               Descargar CV
             </Button>
-            <a href="https://github.com/raulespmol" target="_blank">
-              <GitHub color="#0097b2" size={50}/>
-            </a>
-            <a href="https://www.linkedin.com/in/raul-espinoza-molina/" target="_blank">
-              <LinkedIn color="#0097b2" size={50}/>
-            </a>
+            <Button isIconOnly color="primary" variant="light">
+              <GitHub color="#0097b2"/>
+            </Button>
+            <Button isIconOnly color="primary" variant="light">
+              <LinkedIn color="#0097b2"/>
+            </Button>
           </div>
         </div>
       </div>

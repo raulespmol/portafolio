@@ -3,7 +3,7 @@ import { navLinks } from "../constants"
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between items-center bg-white px-10 py-2 fixed top-0 left-0 w-full">
+    <header className="flex justify-between items-center bg-white px-10 py-2 fixed top-0 left-0 w-full z-50">
       <div>
         <h2 className="font-ubuntu font-black text-3xl">[remo]</h2>
       </div>

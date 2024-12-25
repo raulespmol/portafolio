@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { GitHub, LinkedIn } from "../assets/icons"
+import { File, GitHub, LinkedIn } from "../assets/icons"
 import { avatar } from "../assets/images"
 import { Button } from "@nextui-org/react"
 
@@ -38,14 +38,28 @@ const About = () => {
             </p>
           </div>
           <div className="flex items-center gap-2 mt-5">
-            <Button color="primary" size="lg" onPress={downloadCV}>
+            <Button 
+              color="primary" 
+              size="lg" 
+              onPress={downloadCV}
+              endContent={<File />}
+              className="text-xl"
+            >
               Descargar CV
             </Button>
-            <Button isIconOnly color="primary" variant="light">
-              <GitHub color="#0097b2"/>
+            <Button 
+              isIconOnly 
+              color="primary" 
+              variant="light"
+            >
+              <GitHub color="grey"/>
             </Button>
-            <Button isIconOnly color="primary" variant="light">
-              <LinkedIn color="#0097b2"/>
+            <Button 
+              isIconOnly 
+              color="primary" 
+              variant="light"
+            >
+              <LinkedIn color="grey"/>
             </Button>
           </div>
         </div>

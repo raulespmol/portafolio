@@ -8,6 +8,7 @@ import reactColor from "./react-color.svg";
 import reactFlat from "./react-flat.svg";
 import GitHub from "./Github";
 import LinkedIn from "./LinkedIn";
+import File from "./File";
 
 export {
   bootstrapColor,
@@ -19,5 +20,6 @@ export {
   reactColor,
   reactFlat,
   GitHub,
-  LinkedIn
+  LinkedIn,
+  File
 }

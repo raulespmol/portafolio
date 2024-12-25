@@ -1,7 +1,9 @@
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 import { Button, Image } from "@nextui-org/react"
 
 const ProjectCard = ({id, title, desc, img, stack, url}) => {
+  const navigate = useNavigate()
+
   return (
     <div className="bg-slate-100 rounded-lg shadow-sm p-3 flex flex-col justify-between">
       <div>
@@ -24,17 +26,22 @@ const ProjectCard = ({id, title, desc, img, stack, url}) => {
         </div>
         <div className="flex items-center gap-2">
           
-          <Link to={url}>
-            <Button color="primary">
+          {url && 
+            <Button 
+              color="primary"
+              onPress={() => window.open(url, "_blank")}
+            >
               Ir al Sitio
-            </Button> 
-          </Link>
+            </Button>
+          }
 
-          <Link to={`/proyectos/${id}`}>
-            <Button variant="ghost" className="text-gray-500">
-              Ver Detalles
-            </Button> 
-          </Link>
+          <Button 
+            variant="ghost" 
+            className="text-gray-500"
+            onPress={() => navigate(`/proyectos/${id}`)}
+          >
+            Ver Detalles
+          </Button>
 
         </div>
       </div>

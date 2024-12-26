@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { File, GitHub, LinkedIn } from "../assets/icons"
 import { avatar } from "../assets/images"
-import { Button } from "@nextui-org/react"
+import { Button } from "@material-tailwind/react"
 
 const downloadCV = () => {
   const link = document.createElement("a")
@@ -39,25 +39,15 @@ const About = () => {
           </div>
           <div className="flex items-center gap-2 mt-5">
             <Button 
-              color="primary" 
-              size="lg" 
-              onPress={downloadCV}
-              endContent={<File />}
-              className="text-xl"
+              onClick={downloadCV}
             >
               Descargar CV
             </Button>
             <Button 
-              isIconOnly 
-              color="primary" 
-              variant="light"
             >
               <GitHub color="grey"/>
             </Button>
             <Button 
-              isIconOnly 
-              color="primary" 
-              variant="light"
             >
               <LinkedIn color="grey"/>
             </Button>

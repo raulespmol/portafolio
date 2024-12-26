@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router"
-import { Button, Image } from "@nextui-org/react"
+import { Button } from "@material-tailwind/react"
 
 const ProjectCard = ({id, title, desc, img, stack, url}) => {
   const navigate = useNavigate()
@@ -9,7 +9,7 @@ const ProjectCard = ({id, title, desc, img, stack, url}) => {
       <div>
         <h4 className="text-3xl text-center font-semibold mb-4 text-gray-700">{title}</h4>
         <div className="w-full flex items-center justify-center mb-5">
-          <Image 
+          <img 
             src={img} 
             alt={title}
           />
@@ -28,17 +28,14 @@ const ProjectCard = ({id, title, desc, img, stack, url}) => {
           
           {url && 
             <Button 
-              color="primary"
-              onPress={() => window.open(url, "_blank")}
+              onClick={() => window.open(url, "_blank")}
             >
               Ir al Sitio
             </Button>
           }
 
           <Button 
-            variant="ghost" 
-            className="text-gray-500"
-            onPress={() => navigate(`/proyectos/${id}`)}
+            onClick={() => navigate(`/proyectos/${id}`)}
           >
             Ver Detalles
           </Button>
